@@ -36,6 +36,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_ROW_PINS {  B5, B4, D7, D6, B0 }
 #define UNUSED_PINS
 
+/* set the spacebar on left thumb instead of right thumb */
+#define SPACEBAR_ON_LEFT_THUMB
+
 /* define if matrix has ghost */
 //#define MATRIX_HAS_GHOST
 
