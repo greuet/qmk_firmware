@@ -1,9 +1,11 @@
 TypeMechTrix
 ===
 
-An handwired mechanical keyboard inspired by the Typematrix. Its layout is available [here](http://www.keyboard-layout-editor.com/#/gists/4110a75ecdb349b13e17).
+An orthogonal handwired mechanical keyboard inspired by the Typematrix. Its layout is available [here](http://www.keyboard-layout-editor.com/#/gists/4110a75ecdb349b13e17). Its aim was to use Emacs easily, so that a Ctrl key is accessible with the right thumb while the spacebar is on the left thumb.
 
 Hardware Supported: Teensy 2
+
+Two connections with the teensy are available...
 
 To get the firmware for this keyboard:
      make handwired-typemechtrix
