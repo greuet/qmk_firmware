@@ -76,6 +76,3 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
            NO, NO , NO , NO ,  NO  ,      CUT  ,COPY,PASTE,P1  ,P2  ,P3  ,PENT,\
       TRNS   ,  TRNS   , TRNS      ,KC_NO,   TRNS   ,   P0     ,  PDOT,KC_TRNS),
 };
-
-
-const uint16_t PROGMEM fn_actions[] = {};
