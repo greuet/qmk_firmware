@@ -21,14 +21,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #ifdef SPACEBAR_ON_LEFT_THUMB
     [_BASE] = KEYMAP(                                                         \
        ESC, 1,  2,  3,  4,  5,        6,   7,   8,   9,   0,  MINS, EQL,      \
-       TAB, Q,  W,  E,  R,  T, BSPC  ,Y,   U,   I,   O,   P,  LBRC, RBRC,     \
+    KC_TAB, Q,  W,  E,  R,  T, BSPC  ,Y,   U,   I,   O,   P,  LBRC, RBRC,     \
             A,  S,  D,  F,  G,        H,   J,   K,   L,SCLN,  QUOT,           \
        LSFT,Z,  X,  C,  V,  B, ENT   ,N,   M,COMM, DOT,SLSH,BSLASH, RSFT,     \
        LCTL  , LALT  ,  SPC  ,MO(_FN),RCTL  ,  RALT   ,    LGUI   ,TG(_NMPAD)),
 #else
     [_BASE] = KEYMAP(                                                         \
        ESC, 1,  2,  3,  4,  5,        6,   7,   8,   9,   0,  MINS, EQL,      \
-       TAB, Q,  W,  E,  R,  T, BSPC  ,Y,   U,   I,   O,   P,  LBRC, RBRC,     \
+    KC_TAB, Q,  W,  E,  R,  T, BSPC  ,Y,   U,   I,   O,   P,  LBRC, RBRC,     \
             A,  S,  D,  F,  G,        H,   J,   K,   L,SCLN,  QUOT,           \
        LSFT,Z,  X,  C,  V,  B, ENT   ,N,   M,COMM, DOT,SLSH,BSLASH, RSFT,     \
        LCTL  , LALT  , RCTL  ,MO(_FN), SPC  ,  RALT   ,    LGUI   ,TG(_NMPAD)),
@@ -37,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ,----------------------------------------------------------.
     | ` | F1| F2| F3| F4| F5|   | F6| F7| F8| F9 | F10| F11|F12|
     |-----------------------|Del|------------------------------|
-    |Tab|   |   | Up|   |   |   |Udo|   | Up|    |    |    |PSc|
+    |Rst|   |   | Up|   |   |   |Udo|   | Up|    |    |    |PSc|
     |----------------------------------------------------------|
     |   |   |Lef|Dow|Rig|   |   |   |Lef|Dow|Rig |    |    |   |
     |CAP|-------------------|Sft|--------------------------|CAP|
@@ -47,10 +47,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     `----------------------------------------------------------'
   */
     [_FN] = KEYMAP(                                                            \
-      GRV,  F1 , F2 , F3 , F4 , F5 ,DELETE, F6 , F7 , F8  , F9 , F10, F11, F12,\
-      TRNS,TRNS,TRNS, UP ,TRNS,TRNS,       UNDO,TRNS, UP  ,TRNS,TRNS,TRNS,PSCR,\
-      CAPS,TRNS,LEFT,DOWN,RGHT,TRNS, LSFT ,TRNS,LEFT,DOWN ,RGHT,TRNS,TRNS,     \
-           TRNS,TRNS,TRNS,TRNS,TRNS,        CUT,COPY,PASTE,MUTE,VOLD,VOLU,CAPS,\
+      GRV,  F1 , F2 , F3 , F4 , F5 ,        F6 , F7 , F8  , F9 , F10, F11, F12,\
+     RESET,TRNS,TRNS, UP ,TRNS,TRNS,DELETE, UNDO,TRNS, UP  ,TRNS,TRNS,TRNS,PSCR,\
+           TRNS,LEFT,DOWN,RGHT,TRNS,        TRNS,LEFT,DOWN ,RGHT,TRNS,TRNS,    \
+      CAPS,TRNS,TRNS,TRNS,TRNS,TRNS, LSFT , CUT,COPY,PASTE,MUTE,VOLD,VOLU,CAPS,\
       TRNS     , TRNS    ,  LGUI   ,KC_TRNS,MPRV,   MPLY  ,    MNXT , KC_MSTP ),
 
 
@@ -70,9 +70,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   */
 
     [_NMPAD] = KEYMAP(                                                        \
-      ESC, NO, NO , NO , NO ,DELETE,TRNS,DELETE,NO  , NO  ,NLCK,PSLS,PAST,PMNS,\
-      TRNS,NO, NO , UP , NO ,  NO  ,      UNDO ,NO  , NO  ,P7  ,P8  ,P9  ,PPLS,\
-      TRNS,NO,LEFT,DOWN,RGHT,  NO  ,TRNS, NO   ,NO  , NO  ,P4  ,P5  ,P6  ,     \
-           NO, NO , NO , NO ,  NO  ,      CUT  ,COPY,PASTE,P1  ,P2  ,P3  ,PENT,\
+      ESC, NO, NO , NO , NO ,DELETE,      DELETE,NO  , NO  ,NLCK,PSLS,PAST,PMNS,\
+   KC_TRNS,NO, NO , UP , NO ,  NO  ,TRNS, UNDO ,NO  , NO  ,P7  ,P8  ,P9  ,PPLS,\
+           NO,LEFT,DOWN,RGHT,  NO  ,      NO   ,NO  , NO  ,P4  ,P5  ,P6  ,     \
+      TRNS,NO, NO , NO , NO ,  NO  ,TRNS, CUT  ,COPY,PASTE,P1  ,P2  ,P3  ,PENT,\
       TRNS   ,  TRNS   , TRNS      ,KC_NO,   TRNS   ,   P0     ,  PDOT,KC_TRNS),
 };
