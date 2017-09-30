@@ -49,7 +49,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     |CAP|-------------------|Sft|--------------------------|CAP|
     |   |   |   |   |   |   |   |Cut|Cpy|Pst|mute|vol-|vol+|   |
     |----------------------------------------------------------|
-    |  Ctrl |  Alt  |  Win  |Fn |  Prev |  Play  |   Next  |Stp|
+    |  Ctrl |  Win  |  Fn   |Fn |  Prev |  Play  |   Next  |Stp|
     `----------------------------------------------------------'
   */
     [_FN] = KEYMAP(                                                            \
