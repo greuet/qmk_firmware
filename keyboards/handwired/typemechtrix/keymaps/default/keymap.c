@@ -24,7 +24,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB, Q,  W,  E,  R,  T, BSPC  ,Y,   U,   I,   O,   P,  LBRC, RBRC,     \
             A,  S,  D,  F,  G,        H,   J,   K,   L,SCLN,  QUOT,           \
        LSFT,Z,  X,  C,  V,  B, ENT   ,N,   M,COMM, DOT,SLSH,BSLASH, RSFT,     \
-       LCTL  , LALT  ,  SPC  ,MO(_FN),RCTL  ,  RALT   ,    LGUI   ,TG(_NMPAD)),
+    LCTL  , LALT,LT(_FN,KC_SPC),MO(_FN),RCTL,  RALT   ,    LGUI   ,TG(_NMPAD)),
 #else
     [_BASE] = KEYMAP(                                                         \
        ESC, 1,  2,  3,  4,  5,        6,   7,   8,   9,   0,  MINS, EQL,      \
@@ -48,10 +48,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   */
     [_FN] = KEYMAP(                                                            \
       GRV,  F1 , F2 , F3 , F4 , F5 ,        F6 , F7 , F8  , F9 , F10, F11, F12,\
-     RESET,TRNS,TRNS, UP ,TRNS,TRNS,DELETE, UNDO,TRNS, UP  ,TRNS,TRNS,TRNS,PSCR,\
+    RESET,TRNS,TRNS, UP ,TRNS,TRNS,DELETE, UNDO,TRNS, UP  ,TRNS,TRNS,TRNS,PSCR,\
            TRNS,LEFT,DOWN,RGHT,TRNS,        TRNS,LEFT,DOWN ,RGHT,TRNS,TRNS,    \
       CAPS,TRNS,TRNS,TRNS,TRNS,TRNS, LSFT , CUT,COPY,PASTE,MUTE,VOLD,VOLU,CAPS,\
-      TRNS     , TRNS    ,  LGUI   ,KC_TRNS,MPRV,   MPLY  ,    MNXT , KC_MSTP ),
+      TRNS     , LGUI    ,KC_TRNS  ,KC_TRNS,MPRV,   MPLY  ,    MNXT , KC_MSTP ),
 
 
 
@@ -74,5 +74,5 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    KC_TRNS,NO, NO , UP , NO ,  NO  ,TRNS, UNDO ,NO  , NO  ,P7  ,P8  ,P9  ,PPLS,\
            NO,LEFT,DOWN,RGHT,  NO  ,      NO   ,NO  , NO  ,P4  ,P5  ,P6  ,     \
       TRNS,NO, NO , NO , NO ,  NO  ,TRNS, CUT  ,COPY,PASTE,P1  ,P2  ,P3  ,PENT,\
-      TRNS   ,  TRNS   , TRNS      ,KC_NO,   TRNS   ,   P0     ,  PDOT,KC_TRNS),
+      TRNS   ,  TRNS   , KC_TRNS   ,KC_NO,   TRNS   ,   P0     ,  PDOT,KC_TRNS),
 };
