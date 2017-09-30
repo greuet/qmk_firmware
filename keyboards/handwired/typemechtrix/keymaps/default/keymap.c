@@ -29,14 +29,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        ESC, 1,  2,  3,  4,  5,        6,   7,   8,   9,   0,  MINS, EQL,      \
     KC_TAB, Q,  W,  E,  R,  T, BSPC  ,Y,   U,   I,   O,   P,  LBRC, RBRC,     \
             A,  S,  D,  F,  G,        H,   J,   K,   L,SCLN,  QUOT,           \
-       LSFT,Z,  X,  C,  V,  B, ENT   ,N,   M,COMM, DOT,SLSH,BSLASH, RSFT,     \
+MT(MOD_LSFT,KC_CAPS),Z,  X,  C,  V,  B, ENT   ,N,   M,COMM, DOT,SLSH,BSLASH,MT(MOD_RSFT,KC_CAPS), \
     LCTL  , LALT,LT(_FN,KC_SPC),MO(_FN),RCTL,  RALT   ,    LGUI   ,TG(_NMPAD)),
 #else
     [_BASE] = KEYMAP(                                                         \
        ESC, 1,  2,  3,  4,  5,        6,   7,   8,   9,   0,  MINS, EQL,      \
     KC_TAB, Q,  W,  E,  R,  T, BSPC  ,Y,   U,   I,   O,   P,  LBRC, RBRC,     \
             A,  S,  D,  F,  G,        H,   J,   K,   L,SCLN,  QUOT,           \
-       LSFT,Z,  X,  C,  V,  B, ENT   ,N,   M,COMM, DOT,SLSH,BSLASH, RSFT,     \
+MT(MOD_LSFT,KC_CAPS),Z,  X,  C,  V,  B, ENT   ,N,   M,COMM, DOT,SLSH,BSLASH,MT(MOD_RSFT,KC_CAPS), \
        LCTL  , LALT  , RCTL  ,MO(_FN), SPC  ,  RALT   ,    LGUI   ,TG(_NMPAD)),
 #endif
    /* _FN0:
@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       GRV,  F1 , F2 , F3 , F4 , F5 ,        F6 , F7 , F8  , F9 , F10, F11, F12,\
     RESET,TRNS,TRNS, UP ,TRNS,TRNS,DELETE, UNDO,TRNS, UP  ,TRNS,TRNS,TRNS,PSCR,\
            TRNS,LEFT,DOWN,RGHT,TRNS,       TRNS,LEFT,DOWN ,RGHT,TRNS,TRNS,     \
-      CAPS,TRNS,TRNS,TRNS,TRNS,TRNS, LSFT, MCUT,MCPY,MPSTE,MUTE,VOLD,VOLU,CAPS,\
+   KC_CAPS,TRNS,TRNS,TRNS,TRNS,TRNS, LSFT, MCUT,MCPY,MPSTE,MUTE,VOLD,VOLU,KC_CAPS, \
       TRNS     , LGUI    ,KC_TRNS ,KC_TRNS,MPRV ,   MPLY  ,    MNXT , KC_MSTP ),
 
 
@@ -79,6 +79,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       ESC, NO, NO , NO , NO ,DELETE,      DELETE,NO  , NO  ,NLCK,PSLS,PAST,PMNS,\
    KC_TRNS,NO, NO , UP , NO ,  NO  ,TRNS, UNDO ,NO  , NO  ,P7  ,P8  ,P9  ,PPLS,\
            NO,LEFT,DOWN,RGHT,  NO  ,      NO   ,NO  , NO  ,P4  ,P5  ,P6  ,     \
-      TRNS,NO, NO , NO , NO ,  NO  ,TRNS, CUT  ,COPY,PASTE,P1  ,P2  ,P3  ,PENT,\
+   KC_TRNS,NO, NO , NO , NO ,  NO  ,TRNS, CUT  ,COPY,PASTE,P1  ,P2  ,P3  ,KC_PENT,\
       TRNS   ,  TRNS   , KC_TRNS   ,KC_NO,   TRNS   ,   P0     ,  PDOT,KC_TRNS),
 };
