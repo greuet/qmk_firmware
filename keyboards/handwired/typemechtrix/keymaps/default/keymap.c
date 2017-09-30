@@ -4,6 +4,12 @@
 #define _FN    1
 #define _NMPAD 2
 
+// macro to cut/copy/paste
+#define KC_MCUT  LSFT(KC_DELETE)
+#define KC_MCPY  LCTL(KC_INSERT)
+#define KC_MPSTE LSFT(KC_INSERT)
+
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /* _BASE: QWERTY. If your OS is set to use BÉPO then this is the layout to use
     ,-------------------------------------------------------.
@@ -49,9 +55,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_FN] = KEYMAP(                                                            \
       GRV,  F1 , F2 , F3 , F4 , F5 ,        F6 , F7 , F8  , F9 , F10, F11, F12,\
     RESET,TRNS,TRNS, UP ,TRNS,TRNS,DELETE, UNDO,TRNS, UP  ,TRNS,TRNS,TRNS,PSCR,\
-           TRNS,LEFT,DOWN,RGHT,TRNS,        TRNS,LEFT,DOWN ,RGHT,TRNS,TRNS,    \
-      CAPS,TRNS,TRNS,TRNS,TRNS,TRNS, LSFT , CUT,COPY,PASTE,MUTE,VOLD,VOLU,CAPS,\
-      TRNS     , LGUI    ,KC_TRNS  ,KC_TRNS,MPRV,   MPLY  ,    MNXT , KC_MSTP ),
+           TRNS,LEFT,DOWN,RGHT,TRNS,       TRNS,LEFT,DOWN ,RGHT,TRNS,TRNS,     \
+      CAPS,TRNS,TRNS,TRNS,TRNS,TRNS, LSFT, MCUT,MCPY,MPSTE,MUTE,VOLD,VOLU,CAPS,\
+      TRNS     , LGUI    ,KC_TRNS ,KC_TRNS,MPRV ,   MPLY  ,    MNXT , KC_MSTP ),
 
 
 
