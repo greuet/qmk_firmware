@@ -46,7 +46,7 @@ MT(MOD_LSFT,KC_CAPS),Z,  X,  C,  V,  B, ENT   ,N,   M,COMM, DOT,SLSH,BSLASH,MT(M
     |Rst|   |   | Up|   |   |   |Udo|   | Up|    |    |    |PSc|
     |----------------------------------------------------------|
     |   |   |Lef|Dow|Rig|   |   |   |Lef|Dow|Rig |    |    |   |
-    |CAP|-------------------|Sft|--------------------------|CAP|
+    |Sft|-------------------|Sft|--------------------------|Sft|
     |   |   |   |   |   |   |   |Cut|Cpy|Pst|mute|vol-|vol+|   |
     |----------------------------------------------------------|
     |  Ctrl |  Win  |  Fn   |Fn |  Prev |  Play  |   Next  |Stp|
@@ -56,7 +56,7 @@ MT(MOD_LSFT,KC_CAPS),Z,  X,  C,  V,  B, ENT   ,N,   M,COMM, DOT,SLSH,BSLASH,MT(M
       GRV,  F1 , F2 , F3 , F4 , F5 ,        F6 , F7 , F8  , F9 , F10, F11, F12,\
     RESET,TRNS,TRNS, UP ,TRNS,TRNS,DELETE, UNDO,TRNS, UP  ,TRNS,TRNS,TRNS,PSCR,\
            TRNS,LEFT,DOWN,RGHT,TRNS,       TRNS,LEFT,DOWN ,RGHT,TRNS,TRNS,     \
-   KC_CAPS,TRNS,TRNS,TRNS,TRNS,TRNS, LSFT, MCUT,MCPY,MPSTE,MUTE,VOLD,VOLU,KC_CAPS, \
+ KC_TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, LSFT, MCUT,MCPY,MPSTE,MUTE,VOLD,VOLU,KC_TRNS,\
       TRNS     , LGUI    ,KC_TRNS ,KC_TRNS,MPRV ,   MPLY  ,    MNXT , KC_MSTP ),
 
 
