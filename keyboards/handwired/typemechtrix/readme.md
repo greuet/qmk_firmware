@@ -3,7 +3,7 @@ TypeMechTrix
 
 A 60% orthogonal handwired mechanical keyboard inspired by the Typematrix.
 
-The aim was to use Emacs and Awesome Window Manager easily, so that a Ctrl key is accessible with the left thumb (right thumb in the layer activated with Fn2) and the spacebar becomes Super (Windows key) when pressed.
+The aim was to use Emacs easily, so that a Ctrl key is accessible with the left thumb (right thumb in the layer activated with Fn2).
 
 
 
@@ -15,7 +15,6 @@ The layout I use is available [here (french BÉPO + layers)](http://www.keyboard
 
 ### Features
  * Reset Teensy with Fn + Tab
- * Space when spacebar tapped, Super (Windows key) when pressed (useful when using Awesome WM)
  * Caps locks when shift key is tapped, shift key when held
  * Cut/Copy/Paste shortcuts
  * Spacebar on left thumb by default can be switched to right thumb with Fn2 key

@@ -21,7 +21,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     |Sft|-------------------|RET|-----------------------|Sft|
     |   |  Z|  X|  C|  V|  B|   |  N|  M|  ,|  .|  /|  \|   |
     |-------------------------------------------------------|
-    |  Ctrl |  Alt  |Spc/Win|Fn |  Ctrl | AltGr |  Win  |NmP|
+    |  Ctrl |  Alt  |  Spc  |Fn |  Ctrl | AltGr |  Win  |NmP|
     `-------------------------------------------------------'
   */
     [_BASE] = KEYMAP(                                                         \
@@ -29,7 +29,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB, Q,  W,  E,  R,  T, BSPC  ,Y,   U,   I,   O,   P,  LBRC, RBRC,     \
             A,  S,  D,  F,  G,        H,   J,   K,   L,SCLN,  QUOT,           \
 MT(MOD_LSFT,KC_CAPS),Z,  X,  C,  V,  B, ENT   ,N,   M,COMM, DOT,SLSH,BSLASH,MT(MOD_RSFT,KC_CAPS), \
-    LCTL  , LALT,GUI_T(KC_SPC),MO(_FN),KC_RCTL,  RALT   ,    LGUI   ,TG(_BASE_RIGHT_SPACE)),
+    LCTL  , LALT, KC_SPC,MO(_FN),KC_RCTL,  RALT   ,    LGUI   ,TG(_BASE_RIGHT_SPACE)),
 
 
   /* _BASE: QWERTY with Spacebar on right thumb
@@ -42,7 +42,7 @@ MT(MOD_LSFT,KC_CAPS),Z,  X,  C,  V,  B, ENT   ,N,   M,COMM, DOT,SLSH,BSLASH,MT(M
     |Sft|-------------------|RET|-----------------------|Sft|
     |   |  Z|  X|  C|  V|  B|   |  N|  M|  ,|  .|  /|  \|   |
     |-------------------------------------------------------|
-    |  Ctrl |  Alt  |  Ctrl |Fn |Spc/Win| AltGr |  Win  |NmP|
+    |  Ctrl |  Alt  |  Ctrl |Fn |  Spc  | AltGr |  Win  |NmP|
     `-------------------------------------------------------'
   */
     [_BASE_RIGHT_SPACE] = KEYMAP(                                                         \
@@ -50,7 +50,7 @@ MT(MOD_LSFT,KC_CAPS),Z,  X,  C,  V,  B, ENT   ,N,   M,COMM, DOT,SLSH,BSLASH,MT(M
     KC_TAB, Q,  W,  E,  R,  T, BSPC  ,Y,   U,   I,   O,   P,  LBRC, RBRC,     \
             A,  S,  D,  F,  G,        H,   J,   K,   L,SCLN,  QUOT,           \
 MT(MOD_LSFT,KC_CAPS),Z,  X,  C,  V,  B, ENT   ,N,   M,COMM, DOT,SLSH,BSLASH,MT(MOD_RSFT,KC_CAPS), \
-       LCTL  , LALT  , KC_RCTL  ,MO(_FN), GUI_T(KC_SPC),  RALT   ,    LGUI   ,KC_TRNS),
+       LCTL  , LALT  , KC_RCTL  ,MO(_FN), KC_SPC,  RALT   ,    LGUI   ,KC_TRNS),
 
    /* _FN:
     ,----------------------------------------------------------.
@@ -62,7 +62,7 @@ MT(MOD_LSFT,KC_CAPS),Z,  X,  C,  V,  B, ENT   ,N,   M,COMM, DOT,SLSH,BSLASH,MT(M
     |Sft|-------------------|Sft|--------------------------|Sft|
     |   |   |   |   |   |   |   |Cut|Cpy|Pst|mute|vol-|vol+|   |
     |----------------------------------------------------------|
-    |  Ctrl |  Alt  |Spc/Win|Fn |  Prev |  Play  |   Next  |Stp|
+    |  Ctrl |  Alt  |  Win  |Fn |  Prev |  Play  |   Next  |Stp|
     `----------------------------------------------------------'
   */
     [_FN] = KEYMAP(                                                            \
@@ -70,5 +70,5 @@ MT(MOD_LSFT,KC_CAPS),Z,  X,  C,  V,  B, ENT   ,N,   M,COMM, DOT,SLSH,BSLASH,MT(M
     RESET,TRNS,TRNS, UP ,TRNS,TRNS,DELETE, UNDO,TRNS, UP  ,TRNS,TRNS,TRNS,PSCR,\
            TRNS,LEFT,DOWN,RGHT,TRNS,       TRNS,LEFT,DOWN ,RGHT,TRNS,TRNS,     \
  KC_TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, LSFT, MCUT,MCPY,MPSTE,MUTE,VOLD,VOLU,KC_TRNS,\
-      TRNS     , TRNS  ,GUI_T(KC_SPC) ,KC_TRNS,KC_MPRV ,   MPLY  ,    MNXT , KC_MSTP ),
+      TRNS     , TRNS  ,KC_LGUI ,KC_TRNS,KC_MPRV ,   MPLY  ,    MNXT , KC_MSTP ),
 };
