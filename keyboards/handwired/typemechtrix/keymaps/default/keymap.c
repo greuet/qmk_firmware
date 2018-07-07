@@ -21,7 +21,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     |Sft|-------------------|RET|-----------------------|Sft|
     |   |  Z|  X|  C|  V|  B|   |  N|  M|  ,|  .|  /|  \|   |
     |-------------------------------------------------------|
-    |  Ctrl |  Alt  | Space |Fn |  Ctrl | AltGr |  Win  |NmP|
+    |  Ctrl |  Alt  |Spc/Win|Fn |  Ctrl | AltGr |  Win  |NmP|
     `-------------------------------------------------------'
   */
 #ifdef SPACEBAR_ON_LEFT_THUMB
@@ -30,14 +30,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB, Q,  W,  E,  R,  T, BSPC  ,Y,   U,   I,   O,   P,  LBRC, RBRC,     \
             A,  S,  D,  F,  G,        H,   J,   K,   L,SCLN,  QUOT,           \
 MT(MOD_LSFT,KC_CAPS),Z,  X,  C,  V,  B, ENT   ,N,   M,COMM, DOT,SLSH,BSLASH,MT(MOD_RSFT,KC_CAPS), \
-    LCTL  , LALT,LT(_FN,KC_SPC),MO(_FN),RCTL,  RALT   ,    LGUI   ,TG(_NMPAD)),
+    LCTL  , LALT,GUI_T(KC_SPC),MO(_FN),RCTL,  RALT   ,    LGUI   ,TG(_NMPAD)),
 #else
     [_BASE] = KEYMAP(                                                         \
        ESC, 1,  2,  3,  4,  5,        6,   7,   8,   9,   0,  MINS, EQL,      \
     KC_TAB, Q,  W,  E,  R,  T, BSPC  ,Y,   U,   I,   O,   P,  LBRC, RBRC,     \
             A,  S,  D,  F,  G,        H,   J,   K,   L,SCLN,  QUOT,           \
 MT(MOD_LSFT,KC_CAPS),Z,  X,  C,  V,  B, ENT   ,N,   M,COMM, DOT,SLSH,BSLASH,MT(MOD_RSFT,KC_CAPS), \
-       LCTL  , LALT  , RCTL  ,MO(_FN), SPC  ,  RALT   ,    LGUI   ,TG(_NMPAD)),
+       LCTL  , LALT  , RCTL  ,MO(_FN), GUI_T(KC_SPC),  RALT   ,    LGUI   ,TG(_NMPAD)),
 #endif
    /* _FN0:
     ,----------------------------------------------------------.
@@ -49,7 +49,7 @@ MT(MOD_LSFT,KC_CAPS),Z,  X,  C,  V,  B, ENT   ,N,   M,COMM, DOT,SLSH,BSLASH,MT(M
     |Sft|-------------------|Sft|--------------------------|Sft|
     |   |   |   |   |   |   |   |Cut|Cpy|Pst|mute|vol-|vol+|   |
     |----------------------------------------------------------|
-    |  Ctrl |  Win  |  Fn   |Fn |  Prev |  Play  |   Next  |Stp|
+    |  Ctrl |  Alt  |Spc/Win|Fn |  Prev |  Play  |   Next  |Stp|
     `----------------------------------------------------------'
   */
     [_FN] = KEYMAP(                                                            \
@@ -57,7 +57,7 @@ MT(MOD_LSFT,KC_CAPS),Z,  X,  C,  V,  B, ENT   ,N,   M,COMM, DOT,SLSH,BSLASH,MT(M
     RESET,TRNS,TRNS, UP ,TRNS,TRNS,DELETE, UNDO,TRNS, UP  ,TRNS,TRNS,TRNS,PSCR,\
            TRNS,LEFT,DOWN,RGHT,TRNS,       TRNS,LEFT,DOWN ,RGHT,TRNS,TRNS,     \
  KC_TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, LSFT, MCUT,MCPY,MPSTE,MUTE,VOLD,VOLU,KC_TRNS,\
-      TRNS     , LGUI    ,KC_TRNS ,KC_TRNS,MPRV ,   MPLY  ,    MNXT , KC_MSTP ),
+      TRNS     , TRNS  ,KC_TRNS ,KC_TRNS,MPRV ,   MPLY  ,    MNXT , KC_MSTP ),
 
 
 
